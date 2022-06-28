@@ -8,51 +8,147 @@
         font-family: "Roboto", sans-serif;
         margin: 0;
         padding: 0;
+        box-sizing: border-box;
       }
-      header {
+
+      header, footer {
         background: #1f2937;
         color: white;
       }
+
       a {
         color: white;
         text-decoration: none;
         display: inline-block;
         margin: 0 12px;
       }
+
       #top-part-of-header {
         display: flex;
         justify-content: space-between;
         padding: 20px 0 0;
       }
+
       #hero {
         padding: 130px 0;
         display: flex;
       }
+
       #hero h1 {
         font-size: 48px;
         font-weight: extra-bold;
         color: #f9faf8;
       }
+
       #hero p {
         margin: 10px 0;
       }
+
       #hero > div {
         width: 50%;
       }
+
       #hero-image {
         background: #999;
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
+
       .content {
         width: 1000px;
         margin: 0 auto;
       }
+
       button {
         background: #3882f6;
         border: 0;
-        border-radius: 5px;
+        border-radius: 10px;
         padding: 10px 40px;
         color: #f9faf8;
         font-size: 18px;
+      }
+
+      footer {
+        padding: 40px 0;
+        text-align: center;
+      }
+
+      main {
+        width: 100%;
+      }
+      main > section > div {
+        width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      main > section:first-child > div {
+        padding: 50px 0 125px;
+      }
+
+      .image-gallery {
+        display: flex;
+        gap: 50px;
+        justify-content: center;
+      }
+
+      h2 {
+        font-size: 36px;
+        color:  #1f2937;
+        text-align: center;
+        margin-bottom: 55px;
+      }
+
+      .image-with-label {
+        width: 170px;
+        color:  #1f2937;
+        text-align: center;
+        font-weight: lighter;
+      }
+
+      .image-with-label div {
+        height: 170px;
+        border: 4px solid #3882f6;
+        border-radius: 10px;
+        margin-bottom: 10px;
+      }
+
+      main > section:nth-child(even) {
+        background: #e5e7eb;
+      }
+
+      main > section:nth-child(even) > div {
+        padding: 135px 100px 100px 130px;
+        color:  #1f2937;
+      }
+
+      main > section:nth-child(even) blockquote {
+        font-style: italic;
+        font-size: 36px;
+        font-weight: lighter;
+      }
+
+      main > section:nth-child(even) p {
+        text-align: right;
+        font-size: 24px;
+        font-weight: bold;
+      }
+
+      main > section:last-child > div {
+        margin-top: 100px;
+        margin-bottom: 100px;
+        padding: 50px 120px;
+        background: #3882f6;
+        border-radius: 5px;
+        color: #f9faf8;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      main > section:last-child button {
+        border: 2px solid #f9faf8;
+        border-radius: 10px;
       }
     </style>
     <script>
@@ -83,14 +179,57 @@
             <button>Sign up</button>
           </div>
           <div id="hero-image">
-            this is a placeholder for an image
+            <p>this is a placeholder for an image</p>
           </div>
         </div>
       </div>
     </header>
     <main>
+      <section>
+        <div>
+          <h2>Some random information.</h2>
+          <div class="image-gallery">
+            <div class="image-with-label">
+              <div></div>
+              <p>this is some subtext under an illustration or image<p>
+            </div>
+            <div class="image-with-label">
+              <div></div>
+              <p>this is some subtext under an illustration or image<p>
+            </div>
+            <div class="image-with-label">
+              <div></div>
+              <p>this is some subtext under an illustration or image<p>
+            </div>
+            <div class="image-with-label">
+              <div></div>
+              <p>this is some subtext under an illustration or image<p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div>
+          <blockquote>
+            This is an inspiring quote, or a testimonial from a customer. Maybe
+            it's just filling up space, or maybe people will actually read it.
+            Who knows?  All I know is that it looks nice.
+          </blockquote>
+          <p>-Thor, God of Thunder</p>
+        </div>
+      </section>
+      <section>
+        <div>
+          <div>
+            <h3>Call to action! It's time!</h3>
+            <p>Sign up for our product by clicking that button right over there!</p>
+          </div>
+          <button>Sign Up</button>
+        </div>
+      </section>
     </main>
     <footer>
+      Copyright &copy; The Odin Project 2021
     </footer>
   </body>
 </html>
